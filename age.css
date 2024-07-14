@@ -1,0 +1,50 @@
+.all {
+  width: 600px;
+  height: 400px;
+  background-color: honeydew;
+  box-shadow: 2px 3px 7px;
+  text-align: center;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  padding-top: 50px;
+}
+
+.all h2 {
+  color: blue;
+}
+
+.all label {
+  margin-right: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.all button {
+  margin-top: 10px;
+  width: 100px;
+  margin-left: 130px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.all button:hover {
+  background-color: hsl(240, 62%, 77%);
+}
+
+.all button:active {
+  background-color: hsl(240, 82%, 53%);
+}
+
+#age {
+  margin-top: 40px;
+}
+
+#text {
+  width: 150px;
+  border-radius: 5px;
+  border-color: blue;
+  height: 30px;
+}
