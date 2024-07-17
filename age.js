@@ -1,18 +1,24 @@
 function btn() {
-  const { value } = document.getElementById('text');
+  const element = document.getElementById('text');
+  const { value } = element;
   const ageElement = document.getElementById('age');
   const [year, month, day] = value.split('-');
 
   const current = new Date();
-
   const currentYear = current.getFullYear();
   const trueage = currentYear - parseInt(year, 10);
   const currentMonth = current.getMonth();
+  const currentday = current.getDay();
+  const trueMonth = Math.abs(currentMonth - parseInt(month, 10)) - 1;
+  const trueDay = Math.abs(currentday - parseInt(day, 10));
 
   if (parseInt(year, 10) === currentYear) {
-    ageElement.innerHTML = `You are just ${parseInt(month, 10)} month with ${parseInt(day, 10)} day`;
+    if (trueMonth === 0) {
+      ageElement.innerHTML = 'You  born in this month';
+    } else {
+      ageElement.innerHTML = `You are just ${trueMonth} month with ${parseInt(trueDay, 10)} day`;
+    }
   } else if (parseInt(year, 10) < currentYear) {
-    const trueMonth = Math.abs(currentMonth - parseInt(month, 10)) - 1;
     if (trueMonth === 0) {
       ageElement.innerHTML = `Your are ${trueage} year old`;
     } else {
